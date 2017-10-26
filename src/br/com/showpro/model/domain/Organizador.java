@@ -9,13 +9,10 @@ package br.com.showpro.model.domain;
  *
  * @author mrlopito
  */
-public class Administrador extends Funcionario {
-
-    public Administrador(String cpf, String nomeUsuario, String emailUsuario, String senhaUsuario) {
-        super(cpf, nomeUsuario, emailUsuario, senhaUsuario);
+public class Organizador extends Usuario {
+    
+    public Organizador(String nomeUsuario, String emailUsuario, String senhaUsuario) {
+        super(nomeUsuario, emailUsuario, senhaUsuario);
     }
-    
-    
-    
     
 }

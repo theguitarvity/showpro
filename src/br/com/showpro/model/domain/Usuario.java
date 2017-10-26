@@ -11,12 +11,13 @@ import java.io.Serializable;
  *
  * @author mrlopito
  */
-public class Usuario implements Serializable {
+public abstract class Usuario implements Serializable {
 
     private int idUsuario;
-    private String nomeUsuario;
+
     private String emailUsuario;
     private String senhaUsuario;
+    private String nomeUsuario;
 
     public Usuario(String nomeUsuario, String emailUsuario, String senhaUsuario) {
         this.nomeUsuario = nomeUsuario;
@@ -24,7 +25,7 @@ public class Usuario implements Serializable {
         this.senhaUsuario = senhaUsuario;
     }
 
-    public String getNomeUsuario() {
+    public  String getNomeUsuario() {
         return nomeUsuario;
     }
 
@@ -43,7 +44,5 @@ public class Usuario implements Serializable {
     public void setSenhaUsuario(String senhaUsuario) {
         this.senhaUsuario = senhaUsuario;
     }
-    
-    
 
 }
