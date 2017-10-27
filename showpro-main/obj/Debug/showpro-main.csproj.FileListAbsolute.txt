@@ -1,0 +1,13 @@
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-main.exe.config
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro-main.csprojResolveAssemblyReference.cache
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro_main.LoginPage.resources
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro_main.Properties.Resources.resources
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro-main.csproj.GenerateResource.Cache
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-main.exe
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-main.pdb
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro-main.exe
+C:\Users\Victor\desenv\showpro\showpro-main\obj\Debug\showpro-main.pdb
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\MetroFramework.dll
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-organizador.exe
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-organizador.pdb

@@ -1,0 +1,9 @@
+C:\Users\Victor\desenv\showpro\showpro-organizador\bin\Debug\showpro-organizador.exe.config
+C:\Users\Victor\desenv\showpro\showpro-organizador\bin\Debug\showpro-organizador.exe
+C:\Users\Victor\desenv\showpro\showpro-organizador\bin\Debug\showpro-organizador.pdb
+C:\Users\Victor\desenv\showpro\showpro-organizador\bin\Debug\MetroFramework.dll
+C:\Users\Victor\desenv\showpro\showpro-organizador\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Victor\desenv\showpro\showpro-organizador\obj\Debug\showpro_organizador.Properties.Resources.resources
+C:\Users\Victor\desenv\showpro\showpro-organizador\obj\Debug\showpro-organizador.csproj.GenerateResource.Cache
+C:\Users\Victor\desenv\showpro\showpro-organizador\obj\Debug\showpro-organizador.exe
+C:\Users\Victor\desenv\showpro\showpro-organizador\obj\Debug\showpro-organizador.pdb
