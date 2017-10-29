@@ -1,6 +1,6 @@
-﻿namespace showpro_admin
+﻿namespace showpro_bilheteria
 {
-    partial class AdminMain
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // AdminMain
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 319);
-            this.Name = "AdminMain";
-            this.Text = "AdminMain";
-            this.Load += new System.EventHandler(this.AdminMain_Load);
+            this.ClientSize = new System.Drawing.Size(626, 261);
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
@@ -45,3 +44,4 @@
         #endregion
     }
 }
+

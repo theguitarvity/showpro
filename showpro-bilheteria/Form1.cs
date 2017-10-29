@@ -1,5 +1,4 @@
-﻿using MetroFramework.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace showpro_admin
+namespace showpro_bilheteria
 {
-    public partial class AdminMain : MetroForm
+    public partial class Form1 : Form
     {
-        public AdminMain()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void AdminMain_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -96,6 +96,10 @@
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\showpro-administrador\showpro-administrador.csproj">
+      <Project>{6A8FFC8A-F190-42C0-8A7C-4A97E5FFEE89}</Project>
+      <Name>showpro-administrador</Name>
+    </ProjectReference>
     <ProjectReference Include="..\showpro-organizador\showpro-organizador.csproj">
       <Project>{788e150f-d6d4-45d4-b1fe-91359630b8b2}</Project>
       <Name>showpro-organizador</Name>

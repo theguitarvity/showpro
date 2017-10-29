@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace showpro_admin.Properties
+namespace showpro_bilheteria.Properties
 {
 
 

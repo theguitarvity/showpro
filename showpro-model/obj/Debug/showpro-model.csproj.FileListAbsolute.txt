@@ -1,0 +1,5 @@
+C:\Users\Victor\desenv\showpro\showpro-model\bin\Debug\showpro-model.dll
+C:\Users\Victor\desenv\showpro\showpro-model\bin\Debug\showpro-model.pdb
+C:\Users\Victor\desenv\showpro\showpro-model\obj\Debug\showpro-model.dll
+C:\Users\Victor\desenv\showpro\showpro-model\obj\Debug\showpro-model.pdb
+C:\Users\Victor\desenv\showpro\showpro-model\obj\Debug\showpro-model.csprojResolveAssemblyReference.cache

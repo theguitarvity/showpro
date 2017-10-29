@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using showpro_administrador;
 using showpro_organizador;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace showpro_main
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            MainAdmin form = new MainAdmin();
             form.Show();
             this.Hide();
         }

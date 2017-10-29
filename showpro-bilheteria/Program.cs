@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace showpro_admin
+namespace showpro_bilheteria
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace showpro_admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMain());
+            Application.Run(new Form1());
         }
     }
 }

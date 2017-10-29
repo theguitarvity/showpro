@@ -11,3 +11,5 @@ C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\MetroFramework.dll
 C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-organizador.exe
 C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-organizador.pdb
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-administrador.exe
+C:\Users\Victor\desenv\showpro\showpro-main\bin\Debug\showpro-administrador.pdb

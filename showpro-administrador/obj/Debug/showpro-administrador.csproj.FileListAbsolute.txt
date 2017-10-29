@@ -1,0 +1,12 @@
+C:\Users\Victor\desenv\showpro\showpro-administrador\bin\Debug\showpro-administrador.exe.config
+C:\Users\Victor\desenv\showpro\showpro-administrador\bin\Debug\showpro-administrador.exe
+C:\Users\Victor\desenv\showpro\showpro-administrador\bin\Debug\showpro-administrador.pdb
+C:\Users\Victor\desenv\showpro\showpro-administrador\bin\Debug\MetroFramework.dll
+C:\Users\Victor\desenv\showpro\showpro-administrador\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro_administrador.MainAdmin.resources
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro_administrador.Properties.Resources.resources
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro-administrador.csproj.GenerateResource.Cache
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro-administrador.exe
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro-administrador.pdb
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro-administrador.csprojResolveAssemblyReference.cache
+C:\Users\Victor\desenv\showpro\showpro-administrador\obj\Debug\showpro_administrador.CRUDUsers.resources
