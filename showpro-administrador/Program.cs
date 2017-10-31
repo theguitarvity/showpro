@@ -1,10 +1,12 @@
-﻿using System;
+﻿using showpro.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace showpro_administrador
+
+namespace showpro
 {
     static class Program
     {
@@ -16,7 +18,7 @@ namespace showpro_administrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainAdmin());
+            Application.Run(new LoginPage());
         }
     }
 }

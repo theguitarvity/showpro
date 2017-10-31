@@ -1,4 +1,4 @@
-﻿namespace showpro_administrador
+﻿namespace showpro
 {
     partial class MainAdmin
     {
@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.tileMonitorar = new MetroFramework.Controls.MetroTile();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.metroTile2);
-            this.metroPanel1.Controls.Add(this.metroTile1);
+            this.metroPanel1.Controls.Add(this.tileMonitorar);
             this.metroPanel1.Controls.Add(this.menuStrip1);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -56,20 +56,30 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(652, 279);
+            this.metroPanel1.Size = new System.Drawing.Size(660, 279);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroTile1
+            // metroTile2
             // 
-            this.metroTile1.Location = new System.Drawing.Point(17, 42);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(146, 88);
-            this.metroTile1.TabIndex = 3;
-            this.metroTile1.Text = "Monitorar";
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.metroTile2.Location = new System.Drawing.Point(185, 42);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(146, 88);
+            this.metroTile2.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile2.TabIndex = 4;
+            this.metroTile2.Text = "Gerenciar Usuários";
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // tileMonitorar
+            // 
+            this.tileMonitorar.Location = new System.Drawing.Point(17, 42);
+            this.tileMonitorar.Name = "tileMonitorar";
+            this.tileMonitorar.Size = new System.Drawing.Size(146, 88);
+            this.tileMonitorar.TabIndex = 3;
+            this.tileMonitorar.Text = "Monitorar";
+            this.tileMonitorar.Click += new System.EventHandler(this.tileMonitorar_Click);
             // 
             // menuStrip1
             // 
@@ -80,7 +90,7 @@
             this.sistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(652, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(660, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -146,25 +156,16 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // metroTile2
-            // 
-            this.metroTile2.Location = new System.Drawing.Point(185, 42);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(146, 88);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile2.TabIndex = 4;
-            this.metroTile2.Text = "Gerenciar Usuários";
-            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
             // MainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 359);
+            this.ClientSize = new System.Drawing.Size(700, 359);
             this.Controls.Add(this.metroPanel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainAdmin";
             this.Text = "Showpro - Administrativo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainAdmin_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
@@ -180,7 +181,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile tileMonitorar;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monitoramentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vizualizarToolStripMenuItem;

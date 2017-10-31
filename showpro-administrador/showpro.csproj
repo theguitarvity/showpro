@@ -45,6 +45,10 @@
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.10.4\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,24 +62,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUDUsers.cs">
+    <Compile Include="model\dao\ConnectionFactory.cs" />
+    <Compile Include="model\dao\FuncionarioDAO.cs" />
+    <Compile Include="model\Funcionario.cs" />
+    <Compile Include="model\Usuario.cs" />
+    <Compile Include="view\admin\CRUDUsers - Copy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUDUsers.Designer.cs">
+    <Compile Include="view\admin\CRUDUsers - Copy.Designer.cs">
+      <DependentUpon>CRUDUsers - Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\CRUDUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\CRUDUsers.Designer.cs">
       <DependentUpon>CRUDUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainAdmin.cs">
+    <Compile Include="view\admin\dao\ConnectionFactory.cs" />
+    <Compile Include="view\admin\dao\FuncionarioDAO.cs" />
+    <Compile Include="view\admin\MainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainAdmin.Designer.cs">
+    <Compile Include="view\admin\MainAdmin.Designer.cs">
       <DependentUpon>MainAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CRUDUsers.resx">
+    <Compile Include="view\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\admin\CRUDUsers - Copy.resx">
+      <DependentUpon>CRUDUsers - Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\CRUDUsers.resx">
       <DependentUpon>CRUDUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainAdmin.resx">
+    <EmbeddedResource Include="view\admin\MainAdmin.resx">
       <DependentUpon>MainAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -104,16 +132,7 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\showpro-bilheteria\showpro-bilheteria.csproj">
-      <Project>{0377e2bd-6744-4273-9c72-36fbfc9fe241}</Project>
-      <Name>showpro-bilheteria</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\showpro-model\showpro-model.csproj">
-      <Project>{74475f1c-a825-4437-aa6a-cdcd96eec3a7}</Project>
-      <Name>showpro-model</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

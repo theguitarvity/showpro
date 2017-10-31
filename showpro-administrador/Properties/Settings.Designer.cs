@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace showpro_administrador.Properties
+namespace showpro.Properties
 {
 
 
