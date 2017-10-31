@@ -1,1 +1,17 @@
 C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.exe.config
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.csprojResolveAssemblyReference.cache
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.Properties.Resources.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.csproj.GenerateResource.Cache
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.exe
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.pdb
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\MetroFramework.dll
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\MySql.Data.dll
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\MySql.Data.xml
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.CrudUsuarios.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.MainAdmin.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.Monitoramento.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.NovoFuncionario.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.LoginPage.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.exe
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.pdb

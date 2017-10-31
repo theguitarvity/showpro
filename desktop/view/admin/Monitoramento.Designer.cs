@@ -1,6 +1,6 @@
-﻿namespace desktop
+﻿namespace desktop.view.admin
 {
-    partial class Form1
+    partial class Monitoramento
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Monitoramento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 261);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(500, 261);
+            this.Name = "Monitoramento";
+            this.Text = "Monitoramento";
+            this.Load += new System.EventHandler(this.Monitoramento_Load);
             this.ResumeLayout(false);
 
         }
@@ -44,4 +45,3 @@
         #endregion
     }
 }
-

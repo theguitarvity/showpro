@@ -33,6 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.10.4\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,17 +62,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="model\Administrador.cs" />
+    <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\dao\ConnectionFactory.cs" />
+    <Compile Include="model\Endereco.cs" />
+    <Compile Include="model\dao\FuncionarioDAO.cs" />
+    <Compile Include="model\Evento.cs" />
+    <Compile Include="model\Funcionario.cs" />
+    <Compile Include="model\Ingresso.cs" />
+    <Compile Include="model\Organizador.cs" />
+    <Compile Include="model\Pedido.cs" />
+    <Compile Include="model\TipoEvento.cs" />
+    <Compile Include="model\TipoIngresso.cs" />
+    <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="view\admin\CrudUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\CrudUsuarios.Designer.cs">
+      <DependentUpon>CrudUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\MainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\MainAdmin.Designer.cs">
+      <DependentUpon>MainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Monitoramento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Monitoramento.Designer.cs">
+      <DependentUpon>Monitoramento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\NovoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\NovoFuncionario.Designer.cs">
+      <DependentUpon>NovoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +116,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\admin\CrudUsuarios.resx">
+      <DependentUpon>CrudUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\MainAdmin.resx">
+      <DependentUpon>MainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\Monitoramento.resx">
+      <DependentUpon>Monitoramento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\NovoFuncionario.resx">
+      <DependentUpon>NovoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="view\bilheteria\" />
+    <Folder Include="view\organizador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

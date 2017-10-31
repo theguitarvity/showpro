@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace desktop
+namespace desktop.view
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : MetroForm
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
