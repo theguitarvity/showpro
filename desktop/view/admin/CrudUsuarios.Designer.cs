@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tileNewFuncionario = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -42,24 +42,16 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(560, 315);
             this.metroTabControl1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.tileNewFuncionario);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 394);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 87);
-            this.panel1.TabIndex = 1;
+            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTabPage1
             // 
@@ -70,6 +62,16 @@
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Funcionários Ativos";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(552, 276);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Bilheteria";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
             // 
             // metroTabPage2
             // 
@@ -89,17 +91,17 @@
             this.metroTabPage3.Size = new System.Drawing.Size(552, 276);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Organizadores";
+            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             // 
-            // metroTabPage4
+            // panel1
             // 
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(552, 276);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "Bilheteria";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.panel1.Controls.Add(this.tileNewFuncionario);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(20, 394);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(560, 87);
+            this.panel1.TabIndex = 1;
             // 
             // tileNewFuncionario
             // 
@@ -119,7 +121,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "CrudUsuarios";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Gerenciamento de Usuários";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.CrudUsuarios_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

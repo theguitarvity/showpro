@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using desktop.view.admin;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,13 @@ namespace desktop.view
         private void LoginPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            MainAdmin admin = new MainAdmin();
+            admin.Show();
+            this.Hide();
         }
     }
 }

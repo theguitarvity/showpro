@@ -23,6 +23,7 @@ namespace desktop.model.dao
         public void insertUser(Funcionario fun) {
             try
             {
+                conn = new ConnectionFactory().getConnection();
                 String sql = "INSERT INTO usuario values(@cod, @email, @senha)";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -47,6 +48,7 @@ namespace desktop.model.dao
         public void inserir(Funcionario fun) {
             try
             {
+                conn = new ConnectionFactory().getConnection();
                 insertUser(fun);
                 string sql = "INSERT INTO funcionario values(@cod, @nome, @cpf, @dtNasc, @dtIni, @cargo)";
                 cmd = conn.CreateCommand();
