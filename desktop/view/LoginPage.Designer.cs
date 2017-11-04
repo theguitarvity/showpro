@@ -97,6 +97,7 @@
             this.Style = MetroFramework.MetroColorStyle.Blue;
             this.Text = "Showpro  - Login";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.LoginPage_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

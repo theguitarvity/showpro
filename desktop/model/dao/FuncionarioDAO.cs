@@ -14,16 +14,12 @@ namespace desktop.model.dao
         private MySqlConnection conn;
         private MySqlCommand cmd;
 
-        public FuncionarioDAO()
-        {
-            conn = new ConnectionFactory().getConnection();
-            
-
-        }
+        
         public void insertUser(Funcionario fun) {
+            conn = new ConnectionFactory().getConnection();
             try
             {
-                conn = new ConnectionFactory().getConnection();
+                
                 String sql = "INSERT INTO usuario values(@cod, @email, @senha)";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -37,20 +33,21 @@ namespace desktop.model.dao
             }
             catch (MySqlException erro)
             {
-                throw new InvalidExpressionException("Erro ao inserir o funcionario!");
+                throw new InvalidExpressionException(erro.Message);
 
             }
             finally {
-                conn.Close();
+                
 
             }
         }
         public void inserir(Funcionario fun) {
+            conn = new ConnectionFactory().getConnection();
             try
             {
-                conn = new ConnectionFactory().getConnection();
+                
                 insertUser(fun);
-                string sql = "INSERT INTO funcionario values(@cod, @nome, @cpf, @dtNasc, @dtIni, @cargo)";
+                string sql = "INSERT INTO funcionario(codFuncionario, nomeFuncionario, cpfFuncionario, dataNascimento, dataInicio, cargoFuncionario) values(@cod, @nome, @cpf, @dtNasc, @dtIni, @cargo)";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = sql;
@@ -62,9 +59,9 @@ namespace desktop.model.dao
                 cmd.Parameters.AddWithValue("@cargo", fun.cargoFuncionario);
                 cmd.ExecuteNonQuery();
             }
-            catch
+            catch(MySqlException e)
             {
-                throw new InvalidExpressionException("Erro ao inserir funcionário!");
+                throw new InvalidExpressionException(e.Message);
             }
             finally
             {
@@ -121,6 +118,37 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
-        
+        public List<Funcionario> listar() {
+            conn = new ConnectionFactory().getConnection();
+            try
+            {
+                List<Funcionario> funcionarios = new List<Funcionario>();
+                MySqlDataReader dr;
+                String sql = "select codUsuario, emailUsuario, senhaUsuario, nomeFuncionario, cpfFuncionario, dataNascimento, dataInicio, cargoFuncionario from usuario, funcionario where funcionario.codFuncionario = usuario.codUsuario;";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Funcionario fun = new Funcionario();
+                    fun.codUsuario = Convert.ToInt64(dr[0]);
+                    fun.emailUsuario = Convert.ToString(dr[1]);
+                    fun.senhaUsuario = Convert.ToString(dr[2]);
+                    fun.nomeFuncionario = Convert.ToString(dr[3]);
+                    fun.cpfFuncionario = Convert.ToString(dr[4]);
+                    fun.dataNascFuncionario = Convert.ToDateTime(dr[5]);
+                    fun.dataInicioFuncionario = Convert.ToDateTime(dr[6]);
+                    fun.cargoFuncionario = Convert.ToString(dr[7]);
+                    funcionarios.Add(fun);
+
+                }
+                return funcionarios;
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+            }
+        }
     }
 }

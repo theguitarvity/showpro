@@ -49,8 +49,7 @@
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -258,34 +257,21 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.metroTile1);
+            this.panel1.Controls.Add(this.btnCadastrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(20, 375);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 62);
             this.panel1.TabIndex = 2;
             // 
-            // metroTile1
+            // btnCadastrar
             // 
-            this.metroTile1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroTile1.Location = new System.Drawing.Point(0, 0);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(121, 62);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "Confirmar";
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(177, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrar.Location = new System.Drawing.Point(9, 3);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(109, 56);
+            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // NovoFuncionario
             // 
@@ -314,7 +300,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private System.Windows.Forms.DateTimePicker dtpNasc;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox txtCpf;
@@ -333,6 +318,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton btnCadastrar;
     }
 }

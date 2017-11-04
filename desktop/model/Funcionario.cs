@@ -17,7 +17,10 @@ namespace desktop.model
         public String cargoFuncionario { get; set; }
         #endregion
 
+        public Funcionario():this(0, null, null, null, null, System.DateTime.Now, System.DateTime.Now, null)
+        {
 
+        }
         #region construtor
         public Funcionario(long cod, string email, string senha, string nome, string cpf, DateTime dtNasc, DateTime dtIni, string cargo) : base(cod, email, senha)
         {
@@ -30,7 +33,7 @@ namespace desktop.model
             this.dataNascFuncionario = dtNasc;
             this.cargoFuncionario = cargo;
         }
-
+        
         #endregion
 
 

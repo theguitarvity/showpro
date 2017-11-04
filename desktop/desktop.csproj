@@ -64,7 +64,10 @@
   <ItemGroup>
     <Compile Include="model\Administrador.cs" />
     <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\dao\AdministradorDAO.cs" />
     <Compile Include="model\dao\ConnectionFactory.cs" />
+    <Compile Include="model\dao\EventoDAO.cs" />
+    <Compile Include="model\dao\OrganizadorDAO.cs" />
     <Compile Include="model\Endereco.cs" />
     <Compile Include="model\dao\FuncionarioDAO.cs" />
     <Compile Include="model\Evento.cs" />

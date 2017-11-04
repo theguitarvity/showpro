@@ -30,5 +30,10 @@ namespace desktop.view
             admin.Show();
             this.Hide();
         }
+
+        private void LoginPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

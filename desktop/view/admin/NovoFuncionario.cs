@@ -17,10 +17,11 @@ namespace desktop.view.admin
     {
         private FuncionarioDAO dao = new  FuncionarioDAO();
         long id;
+        private CrudUsuarios baseForm;
 
         private Funcionario getForm() {
             Random random = new Random();
-            id = random.Next(4);
+            id = random.Next(9999, 99999);
             String conf = null;
             if (pwdConfSenha.Text == pwdSenha.Text)
                 conf = pwdSenha.Text;
@@ -28,9 +29,10 @@ namespace desktop.view.admin
             return fun;
 
         }
-        public NovoFuncionario()
+        public NovoFuncionario(CrudUsuarios baseForm)
         {
             InitializeComponent();
+            this.baseForm = baseForm;
         }
 
         private void NovoFuncionario_Load(object sender, EventArgs e)
@@ -50,11 +52,18 @@ namespace desktop.view.admin
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
             try
             {
                 Funcionario fun = getForm();
                 dao.inserir(fun);
                 MessageBox.Show("Funcionario cadastrado!");
+                baseForm.atualizaGrid();
+                
             }
             catch (Exception ex)
             {
