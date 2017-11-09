@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using desktop.view.organizador;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,22 @@ namespace desktop.view.admin
         {
             Monitoramento monit = new Monitoramento();
             monit.ShowDialog();
+        }
+
+        private void cadastrarNovoEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrudEventos crudEventos = new CrudEventos();
+            crudEventos.Show();
+        }
+
+        private void inicarVendaDeIngressosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monitoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

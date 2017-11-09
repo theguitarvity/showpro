@@ -40,15 +40,16 @@ namespace desktop.view.admin
         }
         public void atualizaGrid()
         {
+            this.panelLista.Controls.Clear();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(CrudUsuarios));
             //dgvFuncionarios.DataSource = daoFun.listar();
             foreach (var item in daoFun.listar())
             {
-                MetroPanel panel = new MetroPanel();
-                PictureBox pct = new PictureBox();
-                MetroLabel matricula = new MetroLabel();
+                this.panel = new MetroPanel();
+                this.pct = new PictureBox();
+                this.labelMatricula = new MetroLabel();
 
-                MetroLabel nome = new MetroLabel();
+                this.labelNome= new MetroLabel();
 
                 //adicionar picture box
 
@@ -63,27 +64,27 @@ namespace desktop.view.admin
 
                 //adicionar label do nome
 
-                nome.AutoSize = true;
-                nome.Location = new System.Drawing.Point(62, 4);
-                nome.Name = "nome"+item.codUsuario;
-                nome.Size = new System.Drawing.Size(53, 19);
-                nome.TabIndex = 3;
-                nome.Text = "Nome: " + item.nomeFuncionario;
+                labelNome.AutoSize = true;
+                labelNome.Location = new System.Drawing.Point(62, 4);
+                labelNome.Name = "nome"+item.codUsuario;
+                labelNome.Size = new System.Drawing.Size(53, 19);
+                labelNome.TabIndex = 3;
+                labelNome.Text = "Nome: " + item.nomeFuncionario;
 
 
                 //adicionar label da matricula
 
-                matricula.AutoSize = true;
-                matricula.Location = new System.Drawing.Point(61, 23);
-                matricula.Name = "matricula"+item.codUsuario;
-                matricula.Size = new System.Drawing.Size(66, 19);
-                matricula.TabIndex = 4;
-                matricula.Text = "Matricula: "+ item.codUsuario;
+                this.labelMatricula.AutoSize = true;
+                this.labelMatricula.Location = new System.Drawing.Point(61, 23);
+                this.labelMatricula.Name = "matricula"+item.codUsuario;
+                this.labelMatricula.Size = new System.Drawing.Size(66, 19);
+                this.labelMatricula.TabIndex = 4;
+                this.labelMatricula.Text = "Matricula: "+ item.codUsuario;
 
 
                 //adicionar panel que agrupa todos os itens acima
-                panel.Controls.Add(matricula);
-                panel.Controls.Add(nome);
+                panel.Controls.Add(this.labelMatricula);
+                panel.Controls.Add(this.labelNome);
                 panel.Controls.Add(pct);
                 panel.Dock = System.Windows.Forms.DockStyle.Top;
                 panel.HorizontalScrollbarBarColor = true;
@@ -96,6 +97,7 @@ namespace desktop.view.admin
                 panel.VerticalScrollbarBarColor = true;
                 panel.VerticalScrollbarHighlightOnWheel = false;
                 panel.VerticalScrollbarSize = 10;
+                panel.Margin = new Padding(10, 10, 10, 100);
                 
                 this.panelLista.Controls.Add(panel);
 

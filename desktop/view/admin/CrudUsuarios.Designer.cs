@@ -35,6 +35,12 @@
             this.btnBloquear = new MetroFramework.Controls.MetroButton();
             this.btnAtualizar = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtCpf = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.txtNome = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.toggleEdit = new MetroFramework.Controls.MetroToggle();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -45,16 +51,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tileNewFuncionario = new MetroFramework.Controls.MetroTile();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.txtNome = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.txtCpf = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1.SuspendLayout();
             this.funcionariosPage.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +70,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(560, 507);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -150,6 +153,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações pessoais";
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(7, 171);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(203, 23);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(7, 140);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel5.TabIndex = 4;
+            this.metroLabel5.Text = "E-mail";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(6, 102);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(203, 23);
+            this.txtCpf.TabIndex = 3;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(7, 80);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel4.TabIndex = 2;
+            this.metroLabel4.Text = "CPF";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(7, 42);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(203, 23);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.Click += new System.EventHandler(this.metroTextBox1_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(7, 20);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel3.TabIndex = 0;
+            this.metroLabel3.Text = "Nome";
+            // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
@@ -199,10 +251,12 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.metroPanel3);
+            this.metroTabPage2.Controls.Add(this.metroPanel1);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(552, 276);
+            this.metroTabPage2.Size = new System.Drawing.Size(552, 468);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Administradores";
             this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -213,7 +267,7 @@
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(552, 276);
+            this.metroTabPage4.Size = new System.Drawing.Size(552, 468);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Bilheteria";
             this.metroTabPage4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -224,7 +278,7 @@
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(552, 276);
+            this.metroTabPage3.Size = new System.Drawing.Size(552, 468);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Organizadores";
             this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -249,54 +303,33 @@
             this.tileNewFuncionario.Text = "Novo Funcionário";
             this.tileNewFuncionario.Click += new System.EventHandler(this.tileNewFuncionario_Click);
             // 
-            // metroLabel3
+            // metroPanel1
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(7, 20);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel3.TabIndex = 0;
-            this.metroLabel3.Text = "Nome";
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(259, 468);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // txtNome
+            // metroPanel3
             // 
-            this.txtNome.Location = new System.Drawing.Point(7, 42);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(203, 23);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.Click += new System.EventHandler(this.metroTextBox1_Click);
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(7, 80);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(33, 19);
-            this.metroLabel4.TabIndex = 2;
-            this.metroLabel4.Text = "CPF";
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(6, 102);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(203, 23);
-            this.txtCpf.TabIndex = 3;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(7, 140);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(47, 19);
-            this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "E-mail";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(7, 171);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(203, 23);
-            this.txtEmail.TabIndex = 5;
+            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(265, 0);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(287, 468);
+            this.metroPanel3.TabIndex = 3;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
             // 
             // CrudUsuarios
             // 
@@ -316,6 +349,7 @@
             this.metroPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -346,5 +380,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTextBox txtCpf;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroPanel panel;
+        private MetroFramework.Controls.MetroLabel labelNome;
+        private MetroFramework.Controls.MetroLabel labelMatricula;
+        private System.Windows.Forms.PictureBox pct;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }

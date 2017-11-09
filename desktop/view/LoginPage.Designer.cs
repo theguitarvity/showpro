@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmal = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.pwdSenha = new MetroFramework.Controls.MetroTextBox();
             this.btnEntrar = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
@@ -46,12 +46,12 @@
             this.metroLabel1.Text = "Email";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox1
+            // txtEmal
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(24, 97);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(317, 23);
-            this.metroTextBox1.TabIndex = 1;
+            this.txtEmal.Location = new System.Drawing.Point(24, 97);
+            this.txtEmal.Name = "txtEmal";
+            this.txtEmal.Size = new System.Drawing.Size(317, 23);
+            this.txtEmal.TabIndex = 1;
             // 
             // metroLabel2
             // 
@@ -63,12 +63,14 @@
             this.metroLabel2.Text = "Senha";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox2
+            // pwdSenha
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(24, 157);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(317, 23);
-            this.metroTextBox2.TabIndex = 3;
+            this.pwdSenha.Location = new System.Drawing.Point(24, 157);
+            this.pwdSenha.Name = "pwdSenha";
+            this.pwdSenha.PasswordChar = '●';
+            this.pwdSenha.Size = new System.Drawing.Size(317, 23);
+            this.pwdSenha.TabIndex = 3;
+            this.pwdSenha.UseSystemPasswordChar = true;
             // 
             // btnEntrar
             // 
@@ -89,9 +91,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(386, 285);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.pwdSenha);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtEmal);
             this.Controls.Add(this.metroLabel1);
             this.Name = "LoginPage";
             this.Style = MetroFramework.MetroColorStyle.Blue;
@@ -106,9 +108,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtEmal;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox pwdSenha;
         private MetroFramework.Controls.MetroButton btnEntrar;
     }
 }

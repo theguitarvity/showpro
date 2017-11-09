@@ -15,3 +15,9 @@ C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.NovoFunciona
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.LoginPage.resources
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.exe
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.pdb
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.organizador.MainOrganizador.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.organizador.CrudEventos.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.organizador.NovoEvento.resources
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\pt-BR\desktop.resources.dll
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.admin.MainAdmin.pt-BR.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\pt-BR\desktop.resources.dll
