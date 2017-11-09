@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace desktop.model
 {
-    class Pedido
+    class Lote
     {
-        public long codPedido { get; set; }
-        public Cliente cliente { get; set; }
-        public decimal totalPedido { get; set; }
+        public long codLote { get; set; }
+        public int numeroLote { get; set; }
+        public decimal valor { get; set; }
 
+        
     }
 }

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop.model.dao
 {
-    class EventoDAO
+    class Evento_AtracaoDAO
     {
-
     }
 }

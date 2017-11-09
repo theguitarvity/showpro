@@ -124,12 +124,6 @@
   <data name="organizadorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 19</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>660, 363</value>
-  </data>
-  <data name="&gt;&gt;bilheteriaToolStripMenuItem.Name" xml:space="preserve">
-    <value>bilheteriaToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;fornecedorToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -142,6 +136,9 @@
   </data>
   <data name="&gt;&gt;cadastrarNovoUsuárioToolStripMenuItem.Name" xml:space="preserve">
     <value>cadastrarNovoUsuárioToolStripMenuItem</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 60</value>
   </data>
   <data name="&gt;&gt;inicioToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -179,8 +176,8 @@
   <data name="tileMonitorar.Text" xml:space="preserve">
     <value>Monitorar</value>
   </data>
-  <data name="administradorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+  <data name="monitorarUsuariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 22</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -209,6 +206,9 @@
   <data name="&gt;&gt;sairToolStripMenuItem.Name" xml:space="preserve">
     <value>sairToolStripMenuItem</value>
   </data>
+  <data name="funcionárioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
   <data name="&gt;&gt;funcionárioToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -233,20 +233,20 @@
   <data name="&gt;&gt;relatóriosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;inicarVendaDeIngressosToolStripMenuItem.Name" xml:space="preserve">
-    <value>inicarVendaDeIngressosToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
-  <data name="cadastrosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
+  <data name="monitoramentoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
   </data>
   <data name="&gt;&gt;cadastrosToolStripMenuItem.Name" xml:space="preserve">
     <value>cadastrosToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;sairToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sistemaToolStripMenuItem.Name" xml:space="preserve">
+    <value>sistemaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -256,9 +256,6 @@
   </data>
   <data name="&gt;&gt;gerarRelatoriosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tileMonitorar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;organizadorToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -275,11 +272,17 @@
   <data name="&gt;&gt;tileMonitorar.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
+  <data name="&gt;&gt;novoFuncionárioToolStripMenuItem.Name" xml:space="preserve">
+    <value>novoFuncionárioToolStripMenuItem</value>
+  </data>
   <data name="cadastrarNovoUsuárioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 22</value>
   </data>
   <data name="&gt;&gt;cadastrosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cadastrosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cadastros</value>
   </data>
   <data name="&gt;&gt;tileMonitorar.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -309,6 +312,9 @@
   <data name="&gt;&gt;monitorarEventosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="sistemaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -324,11 +330,14 @@
   <data name="&gt;&gt;cadastrarNovoEventoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="administradorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;sistemaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;cadastrarNovoEventoToolStripMenuItem.Name" xml:space="preserve">
     <value>cadastrarNovoEventoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;novoFuncionárioToolStripMenuItem.Name" xml:space="preserve">
-    <value>novoFuncionárioToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;monitorarEventosToolStripMenuItem.Name" xml:space="preserve">
     <value>monitorarEventosToolStripMenuItem</value>
@@ -336,14 +345,8 @@
   <data name="inicioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
-  <data name="&gt;&gt;administradorToolStripMenuItem.Name" xml:space="preserve">
-    <value>administradorToolStripMenuItem</value>
-  </data>
   <data name="cadastrarNovoEventoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
-  </data>
-  <data name="&gt;&gt;organizadorToolStripMenuItem.Name" xml:space="preserve">
-    <value>organizadorToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;inicioToolStripMenuItem.Name" xml:space="preserve">
     <value>inicioToolStripMenuItem</value>
@@ -351,8 +354,8 @@
   <data name="&gt;&gt;monitoToolStripMenuItem.Name" xml:space="preserve">
     <value>monitoToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="&gt;&gt;monitoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gerarRelatoriosToolStripMenuItem.Text" xml:space="preserve">
     <value>Gerar Relatorios</value>
@@ -378,8 +381,8 @@
   <data name="sairToolStripMenuItem.Text" xml:space="preserve">
     <value>Sair</value>
   </data>
-  <data name="funcionárioToolStripMenuItem.Text" xml:space="preserve">
-    <value>Funcionário</value>
+  <data name="cadastrosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -389,9 +392,6 @@
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>620, 24</value>
-  </data>
-  <data name="inicarVendaDeIngressosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 22</value>
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -417,53 +417,53 @@
   <data name="&gt;&gt;tileMonitorar.Name" xml:space="preserve">
     <value>tileMonitorar</value>
   </data>
-  <data name="novoFuncionárioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+  <data name="tileMonitorar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tileMonitorar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 67</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;organizadorToolStripMenuItem.Name" xml:space="preserve">
+    <value>organizadorToolStripMenuItem</value>
   </data>
   <data name="fornecedorToolStripMenuItem.Text" xml:space="preserve">
     <value>Fornecedor</value>
   </data>
-  <data name="monitorarUsuariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 22</value>
+  <data name="novoFuncionárioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
   </data>
   <data name="ajudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 20</value>
   </data>
-  <data name="monitoramentoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+  <data name="inicarVendaDeIngressosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 22</value>
   </data>
   <data name="monitorarUsuariosToolStripMenuItem.Text" xml:space="preserve">
     <value>Monitorar Usuarios</value>
   </data>
-  <data name="sistemaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sistema</value>
+  <data name="&gt;&gt;bilheteriaToolStripMenuItem.Name" xml:space="preserve">
+    <value>bilheteriaToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;sistemaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>660, 363</value>
   </data>
-  <data name="&gt;&gt;monitoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="&gt;&gt;funcionárioToolStripMenuItem.Name" xml:space="preserve">
     <value>funcionárioToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;sistemaToolStripMenuItem.Name" xml:space="preserve">
-    <value>sistemaToolStripMenuItem</value>
+  <data name="&gt;&gt;administradorToolStripMenuItem.Name" xml:space="preserve">
+    <value>administradorToolStripMenuItem</value>
   </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 60</value>
+  <data name="tileMonitorar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 67</value>
   </data>
-  <data name="cadastrosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cadastros</value>
+  <data name="&gt;&gt;inicarVendaDeIngressosToolStripMenuItem.Name" xml:space="preserve">
+    <value>inicarVendaDeIngressosToolStripMenuItem</value>
   </data>
   <data name="gerarRelatoriosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tileUsuarios.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

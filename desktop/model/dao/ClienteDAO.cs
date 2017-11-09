@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace desktop.model
+namespace desktop.model.dao
 {
-    class TipoIngresso
+    class ClienteDAO
     {
     }
 }

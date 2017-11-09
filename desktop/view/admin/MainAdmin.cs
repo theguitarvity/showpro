@@ -54,5 +54,12 @@ namespace desktop.view.admin
         {
 
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginPage login = new LoginPage();
+            login.Show();
+            this.Hide();
+        }
     }
 }

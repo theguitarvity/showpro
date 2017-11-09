@@ -137,6 +137,7 @@
             // 
             resources.ApplyResources(this.sairToolStripMenuItem, "sairToolStripMenuItem");
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 

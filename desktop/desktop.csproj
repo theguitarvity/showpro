@@ -63,20 +63,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Administrador.cs" />
+    <Compile Include="model\Atracao.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\dao\AdministradorDAO.cs" />
+    <Compile Include="model\dao\ClienteDAO.cs" />
     <Compile Include="model\dao\ConnectionFactory.cs" />
+    <Compile Include="model\dao\EnderecoDAO.cs" />
     <Compile Include="model\dao\EventoDAO.cs" />
+    <Compile Include="model\dao\Evento_AtracaoDAO.cs" />
+    <Compile Include="model\dao\IngressoDAO.cs" />
+    <Compile Include="model\dao\LocalDAO.cs" />
+    <Compile Include="model\dao\LoteDAO.cs" />
     <Compile Include="model\dao\OrganizadorDAO.cs" />
+    <Compile Include="model\dao\TipoEventoDAO.cs" />
     <Compile Include="model\Endereco.cs" />
     <Compile Include="model\dao\FuncionarioDAO.cs" />
     <Compile Include="model\Evento.cs" />
     <Compile Include="model\Funcionario.cs" />
     <Compile Include="model\Ingresso.cs" />
+    <Compile Include="model\Local.cs" />
+    <Compile Include="model\Lote.cs" />
     <Compile Include="model\Organizador.cs" />
     <Compile Include="model\Pedido.cs" />
     <Compile Include="model\TipoEvento.cs" />
-    <Compile Include="model\TipoIngresso.cs" />
     <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
