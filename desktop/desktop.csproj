@@ -66,6 +66,7 @@
     <Compile Include="model\Atracao.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\dao\AdministradorDAO.cs" />
+    <Compile Include="model\dao\AtracaoDAO.cs" />
     <Compile Include="model\dao\ClienteDAO.cs" />
     <Compile Include="model\dao\ConnectionFactory.cs" />
     <Compile Include="model\dao\EnderecoDAO.cs" />

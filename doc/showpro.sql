@@ -21,11 +21,12 @@ create table Cliente(
     
     
 );
+alter table cliente drop update_at;
 drop table Cliente;
+insert into cliente values(1234, 'teste', '44433322211', 'teste@teste', '2015-03-10')
 
 
-
-
+select * from funcionario
 create table Endereco(
 	codEndereco numeric(7) not null,
     logradouro varchar(100) not null,

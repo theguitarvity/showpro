@@ -8,29 +8,25 @@ using MySql.Data.MySqlClient;
 
 namespace desktop.model.dao
 {
-    class EventoDAO
+    class AtracaoDAO
     {
         private MySqlConnection conn;
         private MySqlCommand cmd;
-
-        public void inserir(Evento ev)
+        
+        public void inserir(Atracao atracao)
         {
             conn = new ConnectionFactory().getConnection();
 
             try
             {
-                string sql = "INSERT INTO evento VALUES(@cod, @nome, @dt, @hr, @deta, @tipo, @local)";
+                string sql = "INSERT INTO atracao VALUES(@cod, @nome, @tipo, @detalhes)";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = sql;
-                cmd.Parameters.AddWithValue("@cod", ev.codEvento);
-                cmd.Parameters.AddWithValue("@nome", ev.nomeEvento);
-                cmd.Parameters.AddWithValue("@dt", ev.dtEvento.Date);
-                cmd.Parameters.AddWithValue("@hr", ev.horaEvento);
-                cmd.Parameters.AddWithValue("@deta",ev.detalhesEvento);
-                cmd.Parameters.AddWithValue("@tipo", ev.tipoEvento.codTipo);
-                cmd.Parameters.AddWithValue("@local", ev.localEvento.codLocal);
-
+                cmd.Parameters.AddWithValue("@cod", atracao.codAtracao);
+                cmd.Parameters.AddWithValue("@nome", atracao.nomeAtracao);
+                cmd.Parameters.AddWithValue("@tipo", atracao.tipoAtracao);
+                cmd.Parameters.AddWithValue("@detalhes", atracao.detalhesAtracao);
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException erro)
