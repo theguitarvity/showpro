@@ -54,7 +54,7 @@ create table Tipo(
     primary key(codTipo)
 );
 
-
+select nomeTipo as nome from Tipo
 
 create table Funcionario(
 	codFuncionario numeric(7) not null,
@@ -71,6 +71,17 @@ create table Funcionario(
 
 create table Administrador(
 	codFuncionario numeric(7) not null,
+    privilegio varchar(10) not null,
+    primary key(codFuncionario),
+    foreign key(codFuncionario) references Funcionario(codFuncionario) on update cascade on delete cascade
+
+);
+select * from Tipo;
+rename table Tipo to tipo
+
+create table organizador(
+
+codFuncionario numeric(7) not null,
     privilegio varchar(10) not null,
     primary key(codFuncionario),
     foreign key(codFuncionario) references Funcionario(codFuncionario) on update cascade on delete cascade

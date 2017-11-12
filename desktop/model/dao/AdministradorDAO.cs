@@ -14,7 +14,7 @@ namespace desktop.model.dao
         private MySqlConnection conn;
 
 
-        
+
         public void insert(Administrador fun) {
             FuncionarioDAO funDao = new FuncionarioDAO();
             conn = new ConnectionFactory().getConnection();

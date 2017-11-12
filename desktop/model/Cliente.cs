@@ -12,7 +12,7 @@ namespace desktop.model
         public string nomeCliente { get; set; }
         public string cpfCliente { get; set; }
         public string emailCliente { get; set; }
-        public DateTime dataNascCliente { get; set}
+        public DateTime dataNascCliente { get; set; }
 
     }
 }

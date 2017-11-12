@@ -11,6 +11,6 @@ namespace desktop.model
         public long codLocal { get; set; }
         public string nomeLocal { get; set; }
         public Endereco enderecoLocal { get; set; }
-        public string detalhesLocal { get; set; }
+        
     }
 }

@@ -13,7 +13,7 @@ namespace desktop.model
         public int numeroEndereco { get; set; }
         public string bairroEndereco { get; set; }
         public string cidadeEndereco { get; set; }
-        public char estadoEndereco { get; set; }
+        public string estadoEndereco { get; set; }
         public string cepEndereco { get; set; }
 
 

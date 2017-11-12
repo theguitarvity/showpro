@@ -18,14 +18,14 @@ namespace desktop.model.dao
             conn = new ConnectionFactory().getConnection();
             try
             {
-                string sql = "INSERT INTO local(@cod, @nome, @endereco, @detalhes)";
+                string sql = "INSERT INTO local VALUES(@cod, @nome, @endereco)";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = sql;
                 cmd.Parameters.AddWithValue("@cod", local.codLocal);
                 cmd.Parameters.AddWithValue("@nome",local.nomeLocal);
                 cmd.Parameters.AddWithValue("@endereco",local.enderecoLocal.codEndereco);
-                cmd.Parameters.AddWithValue("@detalhes", local.detalhesLocal);
+                
                 cmd.ExecuteNonQuery();
             }
             catch(MySqlException erro)

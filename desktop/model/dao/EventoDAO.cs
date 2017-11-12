@@ -42,5 +42,38 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
+        public List<Evento> listar()
+        {
+            conn = new ConnectionFactory().getConnection();
+            try
+            {
+                List<Evento> eventos = new List<Evento>();
+                MySqlDataReader dr;
+                string sql = "SELECT * FROM evento";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Evento evento = new Evento();
+                    evento.codEvento = Convert.ToInt64(dr[0]);
+                    evento.nomeEvento = Convert.ToString(dr[1]);
+                    evento.dtEvento = Convert.ToDateTime(dr[2]);
+                    evento.horaEvento = Convert.ToDateTime(dr[3]);
+                    evento.detalhesEvento = Convert.ToString(dr[4]);
+                    eventos.Add(evento);
+                }
+                return eventos;
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
