@@ -82,6 +82,7 @@
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnEntrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnEntrar_KeyDown);
             // 
             // LoginPage
             // 
@@ -89,17 +90,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(386, 285);
+            this.ClientSize = new System.Drawing.Size(373, 285);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.pwdSenha);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.txtEmal);
             this.Controls.Add(this.metroLabel1);
+            this.KeyPreview = true;
             this.Name = "LoginPage";
             this.Style = MetroFramework.MetroColorStyle.Blue;
             this.Text = "Showpro  - Login";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.LoginPage_Load_1);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginPage_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

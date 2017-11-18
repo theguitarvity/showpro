@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop.model
 {
-    class Local
+    public class Local
     {
         public long codLocal { get; set; }
         public string nomeLocal { get; set; }

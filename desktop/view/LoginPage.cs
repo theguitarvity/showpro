@@ -55,5 +55,36 @@ namespace desktop.view
         {
 
         }
+
+        private void LoginPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+            
+        }
+
+        private void btnEntrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                switch (txtEmal.Text)
+                {
+
+                    case "admin":
+                        MainAdmin admin = new MainAdmin();
+                        admin.Show();
+                        this.Hide();
+                        break;
+                    case "orga":
+                        MainOrganizador org = new MainOrganizador();
+                        org.Show();
+                        this.Hide();
+                        break;
+                    default:
+                        MessageBox.Show("Falha na inicialização");
+                        break;
+
+                }
+            }
+        }
     }
 }

@@ -23,4 +23,9 @@ C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.exe
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.pdb
 C:\Users\Victor\desenv\showpro\desktop\bin\Debug\Correios.Net.dll
 C:\Users\Victor\desenv\showpro\desktop\bin\Debug\Correios.Net.pdb
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.organizador.Vinculador.resources
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.exe.manifest
+C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.application
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.exe.manifest
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.application
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.csprojResolveAssemblyReference.cache

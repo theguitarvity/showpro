@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop.model
 {
-    class TipoEvento
+    public class TipoEvento
     {
         public long codTipo { get; set; }
         public string nomeTipo { get; set; }

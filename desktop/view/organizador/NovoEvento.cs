@@ -22,9 +22,10 @@ namespace desktop.view.organizador
         long codEvento;
         long codLocal;
         long codEndereco;
+        string acao = null;
         TipoEvento tipo;
         Local local;
-        
+        private Evento eventoUpdate;
 
         private Evento getFormEvento()
         {
@@ -75,7 +76,24 @@ namespace desktop.view.organizador
         public NovoEvento()
         {
             InitializeComponent();
+            acao = "insert";
         }
+        public NovoEvento(long cod)
+        {
+            InitializeComponent();
+            this.eventoUpdate = eventoDao.buscarPorID(cod);
+            AtivarUpdate(eventoUpdate);
+            acao = "update";
+
+        }
+
+        private void AtivarUpdate(Evento eventoUpdate)
+        {
+            this.txtNome.Text = eventoUpdate.nomeEvento;
+
+
+        }
+
         private TipoEventoDAO tipoDAO = new TipoEventoDAO();
         
 

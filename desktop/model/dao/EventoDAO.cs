@@ -49,7 +49,7 @@ namespace desktop.model.dao
             {
                 List<Evento> eventos = new List<Evento>();
                 MySqlDataReader dr;
-                string sql = "SELECT * FROM evento";
+                string sql = "SELECT * FROM evento ORDER BY dtEvento desc";
                 cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = sql;
@@ -69,6 +69,39 @@ namespace desktop.model.dao
             catch (MySqlException erro)
             {
                 throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public Evento buscarPorID(long id)
+        {
+            conn = new ConnectionFactory().getConnection();
+            try
+            {
+                MySqlDataReader dr;
+                Evento evento = new Evento();
+                string sql = "SELECT * FROM evento WHERE codEvento = @cod ";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@cod", id);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    
+                    evento.codEvento = Convert.ToInt64(dr[0]);
+                    evento.nomeEvento = Convert.ToString(dr[1]);
+                    evento.dtEvento = Convert.ToDateTime(dr[2]);
+                    evento.horaEvento = Convert.ToDateTime(dr[3]);
+                    evento.detalhesEvento = Convert.ToString(dr[4]);
+                }
+                return evento;
+            }
+            catch (MySqlException e)
+            {
+                throw new InvalidExpressionException(e.Message);
             }
             finally
             {

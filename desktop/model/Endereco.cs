@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop.model
 {
-    class Endereco
+    public class Endereco
     {
         public long codEndereco { get; set; }
         public string logradoureEndereco { get; set; }
