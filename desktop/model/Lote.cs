@@ -11,6 +11,8 @@ namespace desktop.model
         public long codLote { get; set; }
         public int numeroLote { get; set; }
         public decimal valor { get; set; }
+        public int maximo { get; set; }
+        public Evento evento { get; set; }
 
         
     }

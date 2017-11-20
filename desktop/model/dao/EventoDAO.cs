@@ -75,6 +75,44 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
+        public List<Atracao> listarAtracoes(long cod)
+        {
+            List < Atracao >lista  = new List<Atracao>();
+            conn = new ConnectionFactory().getConnection();
+            MySqlDataReader dr;
+            try
+            {
+
+                string sql = "select * from atracao, evento_atracao where evento_atracao.codEvento = @cod and evento_atracao.codAtracao = atracao.codAtracao  ";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@cod", cod);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Atracao atracao = new Atracao();
+                    atracao.codAtracao = Convert.ToInt64(dr[0]);
+                    atracao.nomeAtracao = Convert.ToString(dr[1]);
+                    atracao.tipoAtracao = Convert.ToString(dr[2]);
+                    atracao.detalhesAtracao = Convert.ToString(dr[3]);
+                    lista.Add(atracao);
+
+                }
+                return lista;
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+
+            }
+
+
+
+        }
         public Evento buscarPorID(long id)
         {
             conn = new ConnectionFactory().getConnection();
@@ -108,5 +146,6 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
+        
     }
 }

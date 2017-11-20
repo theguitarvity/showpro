@@ -39,6 +39,38 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
+        public List<Lote> listarLotesPorEvento(long cod)
+        {
+            MySqlDataReader dr;
+            List<Lote> lista = new List<Lote>();
+            conn = new ConnectionFactory().getConnection();
+            try
+            {
+                string sql = "select lote.codLote, lote.numero, lote.preco  from lote,evento, ingresso where lote.codLote = ingresso.codIngresso and ingresso.evento = @cod";
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@cod", cod);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Lote lote = new Lote();
+                    lote.codLote = Convert.ToInt64(dr[0]);
+                    lote.numeroLote = Convert.ToInt32(dr[1]);
+                    lote.valor = Convert.ToDecimal(dr[2]);
+                    lista.Add(lote);
+                }
+                return lista;   
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
     }
+   
 }

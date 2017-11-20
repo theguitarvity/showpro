@@ -90,6 +90,7 @@ namespace desktop.view.organizador
         private void AtivarUpdate(Evento eventoUpdate)
         {
             this.txtNome.Text = eventoUpdate.nomeEvento;
+            this.btnCadastrar.Text = "Atualizar evento";
 
 
         }

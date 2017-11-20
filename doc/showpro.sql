@@ -21,12 +21,12 @@ create table Cliente(
     
     
 );
+select * from  cliente;
 alter table cliente drop update_at;
 drop table Cliente;
-insert into cliente values(1234, 'teste', '44433322211', 'teste@teste', '2015-03-10')
+insert into cliente values(1234, 'teste', '44433322211', 'teste@teste', '2015-03-10');
 
-
-select * from funcionario
+select * from funcionario;
 create table Endereco(
 	codEndereco numeric(7) not null,
     logradouro varchar(100) not null,
@@ -54,7 +54,7 @@ create table Tipo(
     primary key(codTipo)
 );
 
-select nomeTipo as nome from Tipo
+select nomeTipo as nome from Tipo;
 
 create table Funcionario(
 	codFuncionario numeric(7) not null,
@@ -77,7 +77,7 @@ create table Administrador(
 
 );
 select * from Tipo;
-rename table Tipo to tipo
+rename table Tipo to tipo;
 
 create table organizador(
 
@@ -118,6 +118,11 @@ create table evento_atracao(
     foreign key(codAtracao) references atracao(codAtracao) on delete cascade
 
 );
+select * from atracao where codAtracao = 8424529;
+select * from atracao
+insert into evento_atracao values(8517437, 7464711)
+select * from evento_atracao;
+select *  from atracao, evento_atracao where atracao.codAtracao = evento_atracao.codAtracao;
 create table ingresso(
 	codIngresso numeric(7) not null,
     lote numeric(7) not null,
@@ -127,10 +132,28 @@ create table ingresso(
     foreign key(evento) references evento(codEvento),
     foreign key(lote) references lote(codLote)
 );
+select lote.numero  from lote,evento, ingresso where lote.codLote = ingresso.codIngresso and ingresso.evento = evento.codEvento;
+create table caixa(
+	codCaixa numeric(7) not null unique,
+    dataAbertura datetime,
+    dataFechamento datetime,
+    totalDiario decimal(15,2),
+    primary key(codCaixa)
+);
 
-
+create table pedido_caixa(
+	codCaixa numeric(7) not null,
+    codPedido numeric(7) not null,
+    primary key(codCaixa, codPedido),
+    foreign key(codCaixa) references caixa(codCaixa)on delete cascade on update cascade,
+    foreign key(codPedido) references pedido(codPedido) on delete cascade on update cascade 
+);
+drop table pedido_caixa;
+drop  table caixa;
 alter table ingresso add column tipo varchar(10) not null;
 drop table lote;
+select * from caixa;
+delete from caixa where codCaixa = 9053958;
 create table lote(
 	codLote numeric(7) not null,
     numero int not null,

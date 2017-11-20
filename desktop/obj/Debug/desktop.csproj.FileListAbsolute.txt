@@ -28,4 +28,10 @@ C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.exe.manifest
 C:\Users\Victor\desenv\showpro\desktop\bin\Debug\desktop.application
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.exe.manifest
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.application
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.organizador.NovaAtracao.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.BilheteriaMain.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.NovoCaixa.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.CrudVendas.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.NovaVenda.resources
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.csprojResolveAssemblyReference.cache
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.NovoCliente.resources

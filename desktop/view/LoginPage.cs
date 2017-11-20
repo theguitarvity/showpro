@@ -1,4 +1,5 @@
 ﻿using desktop.view.admin;
+using desktop.view.bilheteria;
 using desktop.view.organizador;
 using MetroFramework.Forms;
 using System;
@@ -41,6 +42,11 @@ namespace desktop.view
                     org.Show();
                     this.Hide();
                     break;
+                case "bilhet":
+                    BilheteriaMain bilh = new BilheteriaMain();
+                    bilh.Show();
+                    this.Hide();
+                    break; 
                 default:
                     MessageBox.Show("Falha na inicialização");
                     break;

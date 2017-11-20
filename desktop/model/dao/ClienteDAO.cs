@@ -38,5 +38,39 @@ namespace desktop.model.dao
                 conn.Close();
             }
         } 
+        public Cliente buscarPorCpf(String cpf)
+        {
+            conn = new ConnectionFactory().getConnection();
+            MySqlDataReader dr;
+            Cliente cli = new Cliente();
+            try
+            {
+                string sql = "select * from cliente where cpfCliente = @cpf";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    //cli = new Cliente();
+                    cli.codCliente = Convert.ToInt64(dr[0]);
+                    cli.nomeCliente = Convert.ToString(dr[1]);
+                    cli.cpfCliente = Convert.ToString(dr[2]);
+                    cli.emailCliente = Convert.ToString(dr[3]);
+                    cli.dataNascCliente = Convert.ToDateTime(dr[4]);
+                }
+                return cli;
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
+
 }
