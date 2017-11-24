@@ -152,13 +152,30 @@ namespace desktop.view.bilheteria
             try
             {
                 pedidoDao.inserir(pedido);
+                //ingressoDAO.inserir(ingressosASeremVendidos);
                 pedido_ingressoDAO.realizarVenda(ingressosASeremVendidos,pedido);
-                MessageBox.Show("Venda Realizada");
+                FinalizarVenda finalizar = new FinalizarVenda(pedido, eventoDAO.buscarPorID(retornaCodEvento()), loteDao.listarPorEvento(eventoDAO.buscarPorID(retornaCodEvento())).Find(x=>x.codLote == Convert.ToInt64(cmbIngresso.SelectedItem.ToString().Substring(0,7))));
+                finalizar.Show();
                 
             }
             catch (Exception erro)
             {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show(erro.Message+erro.Source);
+            }
+        }
+
+        private void txtCpf_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = clienteDao.buscarPorCpf(txtCpf.Text);
+                txtNome.Text = cliente.nomeCliente;
+                
+            }
+            catch (Exception erro)
+            {
+                NovoCliente cli = new NovoCliente(this);
+                cli.Show();
             }
         }
     }

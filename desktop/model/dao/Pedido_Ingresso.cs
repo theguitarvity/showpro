@@ -16,28 +16,32 @@ namespace desktop.model.dao
 
         public void realizarVenda(List<Ingresso> ingressos, Pedido pedido)
         {
-
-            conn = new ConnectionFactory().getConnection();
-            try
+            foreach(Ingresso ingresso in ingressos)
             {
-                foreach (Ingresso ingresso in ingressos)
+                conn = new ConnectionFactory().getConnection();
+                try
                 {
+
                     string sql = "insert into pedido_ingresso values(@codIngresso, @codPedido)";
+                    cmd = conn.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = sql;
                     cmd.Parameters.AddWithValue("@codIngresso", ingresso.codIngresso);
                     cmd.Parameters.AddWithValue("@codPedido", pedido.codPedido);
                     cmd.ExecuteNonQuery();
+
+                }
+                catch (MySqlException erro)
+                {
+                    throw new InvalidExpressionException(erro.Message);
+                }
+                finally
+                {
+                    conn.Close();
                 }
             }
-            catch (MySqlException erro)
-            {
-                throw new InvalidExpressionException(erro.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+
+           
         }
     }
 }

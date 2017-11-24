@@ -8,7 +8,7 @@ create table Usuario(
     senhaUsuario varchar(30) not null,
     primary key(codUsuario)
 );
-
+select * from cliente where cpfCliente = '44465895801';
 create table Cliente(
 	codCliente numeric(7) not null,
     nomeCliente varchar(30) not null,
@@ -161,7 +161,9 @@ create table lote(
     primary key(codLote)
 
 );
-
+	
+alter table lote add column codEvento numeric(7) not null;
+alter table lote add foreign key (codEvento) references evento(codEvento);
 create table pedido(
 	codPedido numeric(7) not null,
     cliente numeric(7) not null,

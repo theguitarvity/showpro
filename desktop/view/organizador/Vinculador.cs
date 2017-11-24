@@ -180,6 +180,7 @@ namespace desktop.view.organizador
                 Lote lote = getFormLote();
                 loteDao.inserir(lote);
                 MessageBox.Show("Lote adicionado!");
+                AtualizaGridLotes();
             }
             catch (Exception erro)
             {

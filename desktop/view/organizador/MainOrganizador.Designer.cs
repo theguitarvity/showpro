@@ -30,7 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitoramentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.açõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadatrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,9 +44,7 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.tileNovoEvento = new MetroFramework.Controls.MetroTile();
-            this.gerarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monitoramentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.menuStrip1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -72,6 +73,18 @@
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
             // 
+            // novoEventoToolStripMenuItem
+            // 
+            this.novoEventoToolStripMenuItem.Name = "novoEventoToolStripMenuItem";
+            this.novoEventoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.novoEventoToolStripMenuItem.Text = "Novo Evento";
+            // 
+            // monitoramentoToolStripMenuItem
+            // 
+            this.monitoramentoToolStripMenuItem.Name = "monitoramentoToolStripMenuItem";
+            this.monitoramentoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.monitoramentoToolStripMenuItem.Text = "Monitoramento";
+            // 
             // açõesToolStripMenuItem
             // 
             this.açõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,6 +92,12 @@
             this.açõesToolStripMenuItem.Name = "açõesToolStripMenuItem";
             this.açõesToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.açõesToolStripMenuItem.Text = "Ações";
+            // 
+            // gerarRelatórioToolStripMenuItem
+            // 
+            this.gerarRelatórioToolStripMenuItem.Name = "gerarRelatórioToolStripMenuItem";
+            this.gerarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gerarRelatórioToolStripMenuItem.Text = "Gerar Relatório";
             // 
             // sistemaToolStripMenuItem
             // 
@@ -150,6 +169,7 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.metroTile2);
             this.metroTabPage2.Controls.Add(this.tileNovoEvento);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
@@ -169,23 +189,14 @@
             this.tileNovoEvento.Text = "Adicionar novo evento";
             this.tileNovoEvento.Click += new System.EventHandler(this.tileNovoEvento_Click);
             // 
-            // gerarRelatórioToolStripMenuItem
+            // metroTile2
             // 
-            this.gerarRelatórioToolStripMenuItem.Name = "gerarRelatórioToolStripMenuItem";
-            this.gerarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gerarRelatórioToolStripMenuItem.Text = "Gerar Relatório";
-            // 
-            // novoEventoToolStripMenuItem
-            // 
-            this.novoEventoToolStripMenuItem.Name = "novoEventoToolStripMenuItem";
-            this.novoEventoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.novoEventoToolStripMenuItem.Text = "Novo Evento";
-            // 
-            // monitoramentoToolStripMenuItem
-            // 
-            this.monitoramentoToolStripMenuItem.Name = "monitoramentoToolStripMenuItem";
-            this.monitoramentoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.monitoramentoToolStripMenuItem.Text = "Monitoramento";
+            this.metroTile2.Location = new System.Drawing.Point(204, 21);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(170, 82);
+            this.metroTile2.TabIndex = 3;
+            this.metroTile2.Text = "Liberar Bilheteria";
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // MainOrganizador
             // 
@@ -227,5 +238,6 @@
         private System.Windows.Forms.ToolStripMenuItem novoEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monitoramentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarRelatórioToolStripMenuItem;
+        private MetroFramework.Controls.MetroTile metroTile2;
     }
 }

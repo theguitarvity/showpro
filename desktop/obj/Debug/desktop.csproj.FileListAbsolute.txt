@@ -35,3 +35,5 @@ C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.CrudVen
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.NovaVenda.resources
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.csprojResolveAssemblyReference.cache
 C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.NovoCliente.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.bilheteria.FinalizarVenda.resources
+C:\Users\Victor\desenv\showpro\desktop\obj\Debug\desktop.view.portaria.PortariaMain.resources

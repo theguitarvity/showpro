@@ -41,6 +41,8 @@ namespace desktop.model.dao
 
             }
         }
+
+        
         public void inserir(Funcionario fun) {
             conn = new ConnectionFactory().getConnection();
             try

@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using desktop.view.portaria;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,13 @@ namespace desktop.view.organizador
         {
             CrudEventos crud = new CrudEventos();
             crud.Show();
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            PortariaMain port = new PortariaMain();
+            port.Show();
+            this.Hide(); 
         }
     }
 }

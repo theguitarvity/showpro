@@ -29,6 +29,31 @@ namespace desktop.view.admin
             return fun;
 
         }
+        private Administrador getFormAdm()
+        {
+            Random random = new Random();
+            id = random.Next(9999, 99999);
+            String conf = null;
+            if (pwdConfSenha.Text == pwdSenha.Text)
+                conf = pwdSenha.Text;
+            Administrador adm = new Administrador(id, txtEmail.Text, conf, txtNome.Text, txtCpf.Text, dtpNasc.Value, System.DateTime.Now, txtCargo.Text, "Administrativo");
+            return adm;
+
+        }
+        private Organizador getFormOrga()
+        {
+            Random random = new Random();
+            id = random.Next(9999, 99999);
+            String conf = null;
+            if (pwdConfSenha.Text == pwdSenha.Text)
+                conf = pwdSenha.Text;
+            Organizador orga = new Organizador(id, txtEmail.Text, conf, txtNome.Text, txtCpf.Text, dtpNasc.Value, System.DateTime.Now, txtCargo.Text, "Organização");
+
+            return orga;
+
+        }
+
+
         public NovoFuncionario(CrudUsuarios baseForm)
         {
             InitializeComponent();
@@ -59,11 +84,29 @@ namespace desktop.view.admin
         {
             try
             {
-                Funcionario fun = getForm();
-                dao.inserir(fun);
-                MessageBox.Show("Funcionario cadastrado!");
-                baseForm.atualizaGrid();
-                
+                if (rdbBilheteria.Checked)
+                {
+                    Funcionario fun = getForm();
+                    dao.inserir(fun);
+                    MessageBox.Show("Funcionario cadastrado!");
+                    baseForm.atualizaGrid();
+                }
+                else if (rdbAdm.Checked)
+                {
+                    Administrador fun = getFormAdm();
+                    dao.inserir(fun);
+                    MessageBox.Show("Administrador cadastrado!");
+                    baseForm.atualizaGrid();
+                }
+                else if (rdbOrg.Checked)
+                {
+                    Organizador fun = getFormOrga();
+                    dao.inserir(fun);
+                    MessageBox.Show("Organizador cadastrado!");
+                    baseForm.atualizaGrid();
+                }
+
+
             }
             catch (Exception ex)
             {

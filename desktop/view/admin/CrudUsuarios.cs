@@ -17,6 +17,7 @@ namespace desktop.view.admin
 {
     public partial class CrudUsuarios : MetroForm
     {
+        private long codAtual;
         private FuncionarioDAO daoFun= new FuncionarioDAO();
         public CrudUsuarios()
         {
@@ -41,6 +42,7 @@ namespace desktop.view.admin
         public void atualizaGrid()
         {
             this.panelLista.Controls.Clear();
+            int initTam = 12;
             ComponentResourceManager resources = new ComponentResourceManager(typeof(CrudUsuarios));
             //dgvFuncionarios.DataSource = daoFun.listar();
             foreach (var item in daoFun.listar())
@@ -86,20 +88,22 @@ namespace desktop.view.admin
                 panel.Controls.Add(this.labelMatricula);
                 panel.Controls.Add(this.labelNome);
                 panel.Controls.Add(pct);
-                panel.Dock = System.Windows.Forms.DockStyle.Top;
+                //panel.Dock = System.Windows.Forms.DockStyle.Top;
                 panel.HorizontalScrollbarBarColor = true;
                 panel.HorizontalScrollbarHighlightOnWheel = false;
                 panel.HorizontalScrollbarSize = 10;
-                panel.Location = new System.Drawing.Point(0, 0);
-                panel.Name = "panel"+item.codUsuario;
+                panel.Location = new System.Drawing.Point(12, initTam);
+                panel.Name = item.codUsuario.ToString();
                 panel.Size = new System.Drawing.Size(256, 47);
                 panel.TabIndex = 2;
                 panel.VerticalScrollbarBarColor = true;
                 panel.VerticalScrollbarHighlightOnWheel = false;
                 panel.VerticalScrollbarSize = 10;
-                panel.Margin = new Padding(10, 10, 10, 100);
+                panel.Click += new  System.EventHandler(this.Evento_Click);
+                //panel.Margin = new Padding(10, 10, 10, 100);
                 
                 this.panelLista.Controls.Add(panel);
+                initTam += 41;
 
             }
 
@@ -107,6 +111,29 @@ namespace desktop.view.admin
 
 
         }
+        private void Evento_Click(object sender, EventArgs e)
+        {
+            long cod = obterCodigoUsuario(sender);
+            Funcionario fun = daoFun.listar().Find(x=>x.codUsuario==cod);
+            txtNome.Text = fun.nomeFuncionario;
+            txtCpf.Text = fun.cpfFuncionario;
+            txtEmail.Text = fun.emailUsuario;
+            this.codAtual = fun.codUsuario;
+            
+        }
+
+        private long obterCodigoUsuario(object sender)
+        {
+            long cod = 0;
+            Panel panel;
+            if (sender is Panel)
+            {
+                panel = (Panel)sender;
+                cod = Convert.ToInt64(panel.Name);
+            }
+            return cod;
+        }
+
         private void tileNewFuncionario_Click(object sender, EventArgs e)
         {
             NovoFuncionario novo = new NovoFuncionario(this);
@@ -146,6 +173,11 @@ namespace desktop.view.admin
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
         {
 
         }

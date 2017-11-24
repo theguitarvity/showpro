@@ -46,13 +46,13 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panelLista = new MetroFramework.Controls.MetroPanel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tileNewFuncionario = new MetroFramework.Controls.MetroTile();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1.SuspendLayout();
             this.funcionariosPage.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -65,15 +65,15 @@
             // 
             this.metroTabControl1.Controls.Add(this.funcionariosPage);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(560, 507);
             this.metroTabControl1.TabIndex = 0;
-            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // funcionariosPage
             // 
@@ -87,7 +87,7 @@
             this.funcionariosPage.Size = new System.Drawing.Size(552, 468);
             this.funcionariosPage.TabIndex = 0;
             this.funcionariosPage.Text = "Funcionários Ativos";
-            this.funcionariosPage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.funcionariosPage.Theme = MetroFramework.MetroThemeStyle.Light;
             this.funcionariosPage.VerticalScrollbar = true;
             this.funcionariosPage.VerticalScrollbarBarColor = true;
             // 
@@ -120,6 +120,7 @@
             this.btnDeletar.Size = new System.Drawing.Size(75, 23);
             this.btnDeletar.TabIndex = 8;
             this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnBloquear
             // 
@@ -243,7 +244,7 @@
             this.panelLista.Name = "panelLista";
             this.panelLista.Size = new System.Drawing.Size(256, 468);
             this.panelLista.TabIndex = 2;
-            this.panelLista.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.panelLista.Theme = MetroFramework.MetroThemeStyle.Light;
             this.panelLista.VerticalScrollbar = true;
             this.panelLista.VerticalScrollbarBarColor = true;
             this.panelLista.VerticalScrollbarHighlightOnWheel = false;
@@ -261,6 +262,34 @@
             this.metroTabPage2.Text = "Administradores";
             this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(265, 0);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(287, 468);
+            this.metroPanel3.TabIndex = 3;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(259, 468);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // metroTabPage4
             // 
@@ -281,7 +310,7 @@
             this.metroTabPage3.Size = new System.Drawing.Size(552, 468);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Organizadores";
-            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             // 
             // panel1
@@ -303,34 +332,6 @@
             this.tileNewFuncionario.Text = "Novo Funcionário";
             this.tileNewFuncionario.Click += new System.EventHandler(this.tileNewFuncionario_Click);
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(259, 468);
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(265, 0);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(287, 468);
-            this.metroPanel3.TabIndex = 3;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
             // CrudUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,9 +340,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "CrudUsuarios";
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.DropShadow;
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Gerenciamento de Usuários";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Load += new System.EventHandler(this.CrudUsuarios_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.funcionariosPage.ResumeLayout(false);

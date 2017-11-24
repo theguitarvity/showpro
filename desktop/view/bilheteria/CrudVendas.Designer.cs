@@ -30,13 +30,13 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tileNova = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -60,15 +60,6 @@
             this.metroTabPage1.Text = "Hoje";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.tileNova);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 279);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 52);
-            this.panel1.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -77,6 +68,15 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(524, 178);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tileNova);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(20, 279);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(532, 52);
+            this.panel1.TabIndex = 1;
             // 
             // tileNova
             // 
@@ -100,10 +100,11 @@
             this.Name = "CrudVendas";
             this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.DropShadow;
             this.Text = "Vendas";
+            this.Load += new System.EventHandler(this.CrudVendas_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

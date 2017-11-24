@@ -39,6 +39,38 @@ namespace desktop.model.dao
                 conn.Close();
             }
         }
+        public void inserir(List<Ingresso> ingressos)
+        {
+            foreach (Ingresso ing in ingressos)
+            {
+                conn = new ConnectionFactory().getConnection();
+                try
+                {
+
+                    string sql = "INSERT INTO ingresso VALUES(@cod, @lote, @evento, @barras)";
+                    cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = sql;
+
+                    cmd.Parameters.AddWithValue("@cod", ing.codIngresso);
+                    cmd.Parameters.AddWithValue("@lote", ing.lote.codLote);
+                    cmd.Parameters.AddWithValue("@evento", ing.evento.codEvento);
+                    cmd.Parameters.AddWithValue("@barras", ing.codigoBarras);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (MySqlException erro)
+                {
+                    throw new InvalidExpressionException(erro.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+
+
+        }
         public List<Lote> listarLotesPorEvento(long cod)
         {
             MySqlDataReader dr;
@@ -64,6 +96,34 @@ namespace desktop.model.dao
             catch (MySqlException erro)
             {
                 throw new InvalidExpressionException(erro.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public bool validar(Evento evento ,String barras)
+        {
+            conn = new ConnectionFactory().getConnection();
+            try
+            {
+                MySqlDataReader dr;
+                string sql = "select * from ingresso where codigoBarras = @barras and evento = @evento";
+                cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@barras", barras);
+                cmd.Parameters.AddWithValue("@evento", evento.codEvento);
+                dr = cmd.ExecuteReader();
+                if (dr.RecordsAffected > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (MySqlException erro)
+            {
+                throw new InvalidExpressionException(erro.Message);
+                return false;
             }
             finally
             {
